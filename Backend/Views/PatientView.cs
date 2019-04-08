@@ -1,14 +1,14 @@
-﻿using Backend.DAL.Entities.GeneralInformationEntities;
-using Backend.DAL.Entities.InjuriesDiseasesEntities;
+﻿using Backend.Views.GeneralInformationEntities;
+using Backend.Views.InjuriesDiseasesEntities;
 using Backend.DAL.Entities.MedicalExaminationEntities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace Backend.DAL.Entities
+namespace Backend.Views
 {
-    public class Patient
+    public class PatientView
     {
         [Key]
         public int Id { get; set; }
@@ -16,7 +16,7 @@ namespace Backend.DAL.Entities
         public string Photo { get; set; }
 
         public GeneralInformation GeneralInformation { get; set; }
-        public ICollection<MedicalExamination> MedicalExaminations { get; set; }
+        public ICollection<MedicalExaminationView> MedicalExaminations { get; set; }
         public ICollection<InjuriesDiseases> InjuriesDiseases { get; set; }
     }
 }
