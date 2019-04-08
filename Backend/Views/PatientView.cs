@@ -1,6 +1,6 @@
 ﻿using Backend.Views.GeneralInformationEntities;
 using Backend.Views.InjuriesDiseasesEntities;
-using Backend.DAL.Entities.MedicalExaminationEntities;
+using Backend.Views.MedicalExaminationEntities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -15,8 +15,8 @@ namespace Backend.Views
         public string Name { get; set; }
         public string Photo { get; set; }
 
-        public GeneralInformation GeneralInformation { get; set; }
+        public GeneralInformationView GeneralInformation { get; set; }
         public ICollection<MedicalExaminationView> MedicalExaminations { get; set; }
-        public ICollection<InjuriesDiseases> InjuriesDiseases { get; set; }
+        public ICollection<InjuriesDiseasesView> InjuriesDiseases { get; set; }
     }
 }

@@ -3,10 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Backend.DAL.Entities.Common.InstrumentalStudies
 {
-    public class HeartUltrasound
+    public class HeartUltrasound : BaseEntity
     {
-        [Key]
-        public int Id { get; set; }
         public string Info { get; set; }
 
         public int MedicalExaminationId { get; set; }

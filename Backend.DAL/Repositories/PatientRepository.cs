@@ -35,9 +35,7 @@ namespace Backend.DAL.Repositories
         public Patient GetInjuriesDiseasesById(int id)
         {
             return context.Patients
-                .Include(t => t.InjuriesDiseases).ThenInclude(t => t.MRIs)
-                .Include(p => p.InjuriesDiseases).ThenInclude(t => t.HeartUltrasounds)
-                .Include(p => p.InjuriesDiseases).ThenInclude(t => t.DisabilityType)
+                .Include(t => t.InjuriesDiseases)
                 .FirstOrDefault(t => t.Id == id);
         }
             

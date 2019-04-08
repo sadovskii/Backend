@@ -5,10 +5,8 @@ using System.Text;
 
 namespace Backend.DAL.Entities.GeneralInformationEntities
 {
-    public class GeneralInformation
+    public class GeneralInformation : BaseEntity
     {
-        [Key]
-        public int Id { get; set; }
         public DateTime Bithday { get; set; }
         public double Weight { get; set; }
         public double Height { get; set; }      

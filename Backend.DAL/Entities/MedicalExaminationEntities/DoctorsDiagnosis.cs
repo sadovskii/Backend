@@ -4,10 +4,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Backend.DAL.Entities.MedicalExaminationEntities
 {
-    public class DoctorsDiagnosis
+    public class DoctorsDiagnosis : BaseEntity
     {
-        [Key]
-        public int Id { get; set; }
         public string Diagnosis { get; set; }
 
         public int MedicalExaminationId { get; set; }

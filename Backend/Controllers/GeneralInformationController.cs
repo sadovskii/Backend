@@ -25,7 +25,7 @@ namespace Backend.Controllers
 
         // GET: api/GeneralInformation
         [HttpGet]
-        public IEnumerable<GeneralInformationView> GetGeneralInformation()
+        public IEnumerable<GeneralInformation> GetGeneralInformation()
         {
             return _generalInformationRepository.GetAll();
         }
@@ -33,28 +33,28 @@ namespace Backend.Controllers
         #region GET
         // GET: api/GeneralInformation/5
         [HttpGet("{id}")]
-        public GeneralInformationView GetGeneralInformation(int id)
+        public GeneralInformation GetGeneralInformation(int id)
         {
             return _generalInformationRepository.GetBy(t => t.Id == id);
         }
 
         // GET: api/GeneralInformation/5/Fluorography
         [HttpGet("{id}", Name = "GetFluorography")]
-        public List<FluorographyView> GetWithFluorography(int id)
+        public List<Fluorography> GetWithFluorography(int id)
         {
             return _generalInformationRepository.GetFluorographyById(id);
         }
 
         // GET: api/GeneralInformation/5/VaccinationStatus
         [HttpGet("{id}", Name = "GetVaccinationStatus")]
-        public List<VaccinationStatusView> GetWithVaccinationStatus(int id)
+        public List<VaccinationStatus> GetWithVaccinationStatus(int id)
         {
             return _generalInformationRepository.GetVaccinationStatusById(id);
         }
 
         // GET: api/GeneralInformation/5/SurgicalIntervention
         [HttpGet("{id}", Name = "GetSurgicalIntervention")]
-        public List<SurgicalInterventionView> GetWithSurgicalIntervention(int id)
+        public List<SurgicalIntervention> GetWithSurgicalIntervention(int id)
         {
             return _generalInformationRepository.GetSurgicalInterventionById(id);
         }
@@ -63,21 +63,21 @@ namespace Backend.Controllers
         #region POST
         // POST: api/Patients/5/Fluorography
         [HttpPost("{id}/Fluorography")]
-        public void PostWithGeneralInformation(int id, [FromBody] FluorographyView fluorography)
+        public void PostWithGeneralInformation(int id, [FromBody] Fluorography fluorography)
         {
             _generalInformationRepository.InsertFluorography(id, fluorography);
         }
 
         // POST: api/Patients/5/VaccinationStatus
         [HttpPost("{id}/VaccinationStatus")]
-        public void PostWithMedicalExamination(int id, [FromBody] VaccinationStatusView vaccinationStatus)
+        public void PostWithMedicalExamination(int id, [FromBody] VaccinationStatus vaccinationStatus)
         {
             _generalInformationRepository.InsertVaccinationStatus(id, vaccinationStatus);
         }
 
         // POST: api/Patients/5/InjuriesDiseases
         [HttpPost("{id}/SurgicalIntervention")]
-        public void PostWithInjuriesDiseases(int id, [FromBody] SurgicalInterventionView surgicalIntervention)
+        public void PostWithInjuriesDiseases(int id, [FromBody] SurgicalIntervention surgicalIntervention)
         {
             _generalInformationRepository.InserSurgicalIntervention(id, surgicalIntervention);
         }
@@ -85,7 +85,7 @@ namespace Backend.Controllers
 
         // PUT: api/GeneralInformation/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] GeneralInformationView value)
+        public void Put(int id, [FromBody] GeneralInformation value)
         {
             
         }

@@ -10,7 +10,7 @@ namespace Backend.DAL.Interfaces.Repositories
         IEnumerable<T> GetAll();
         T GetBy(Expression<Func<T, bool>> predicate);
         void Insert(T entity);
-        T InsertAndGetEntity(T entity);
+        void InsertOrUpdate(T entity);
         void Update(T entity);
         void Delete(T entity);
         void SaveChanges();

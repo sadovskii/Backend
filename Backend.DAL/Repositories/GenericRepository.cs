@@ -1,4 +1,5 @@
-﻿using Backend.DAL.Interfaces;
+﻿using Backend.DAL.Entities;
+using Backend.DAL.Interfaces;
 using Backend.DAL.Interfaces.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -10,7 +11,7 @@ using System.Text;
 namespace Backend.DAL.Repositories
 {
     public abstract class GenericRepository<C, T> : IGenericRepository<T>
-        where T : class
+        where T : BaseEntity
         where C : DbContext
     {
 
@@ -55,17 +56,6 @@ namespace Backend.DAL.Repositories
             context.SaveChanges();
         }
 
-        public T InsertAndGetEntity(T entity)
-        {
-            if (entity == null)
-            {
-                throw new ArgumentNullException("entity");
-            }
-            entities.Add(entity);
-            context.SaveChanges();
-            return entity;
-        }
-
         public void SaveChanges()
         {
             throw new NotImplementedException();
@@ -79,6 +69,18 @@ namespace Backend.DAL.Repositories
             }
             entities.Update(entity);
             context.SaveChanges();
+        }
+
+        public void InsertOrUpdate(T entity)
+        {
+            //if(entity != null)
+            //{
+            //    context
+            //}
+            //else
+            //{
+
+            //}
         }
     }
 }

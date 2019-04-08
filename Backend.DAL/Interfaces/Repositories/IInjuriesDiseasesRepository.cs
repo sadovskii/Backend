@@ -9,7 +9,12 @@ namespace Backend.DAL.Interfaces.Repositories
     public interface IInjuriesDiseasesRepository : IGenericRepository<InjuriesDiseases>
     {
         InjuriesDiseases GetFullById(int id);
+        List<MRI> GetMRIById(int id);
+        List<HeartUltrasound> GetHeartUltrasoundById(int id);
+
         void InsertHeartUltrasound(int id, HeartUltrasound heartUltrasound);
         void InsertMRI(int id, MRI mri);
+
+
     }
 }

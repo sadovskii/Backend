@@ -5,10 +5,8 @@ using System.Text;
 
 namespace Backend.DAL.Entities.GeneralInformationEntities
 {
-    public class VaccinationStatus
+    public class VaccinationStatus : BaseEntity
     {
-        [Key]
-        public int Id { get; set; } 
         public DateTime ProcedureTime { get; set; }
         public string Information { get; set; }
 

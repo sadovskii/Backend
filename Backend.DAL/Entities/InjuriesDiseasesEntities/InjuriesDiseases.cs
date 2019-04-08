@@ -5,10 +5,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Backend.DAL.Entities.InjuriesDiseasesEntities
 {
-    public class InjuriesDiseases
+    public class InjuriesDiseases : BaseEntity
     {
-        [Key]
-        public int Id { get; set; }
         public DateTime DateInjuriesOrDiseases { get; set; }
         public DateTime ReleasedInMainGroup { get; set; }
         public int DisabilityCountDay { get; set; }

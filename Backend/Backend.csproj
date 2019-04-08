@@ -5,6 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Infrastructure\Converters\InjuriesDiseasesConverters\" />
+    <Folder Include="Infrastructure\Converters\GeneralInformationConverters\" />
+    <Folder Include="Infrastructure\Converters\Common\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

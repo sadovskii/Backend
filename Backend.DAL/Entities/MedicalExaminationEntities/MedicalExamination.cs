@@ -7,10 +7,8 @@ using System.Text;
 
 namespace Backend.DAL.Entities.MedicalExaminationEntities
 {
-    public class MedicalExamination
+    public class MedicalExamination : BaseEntity
     {
-        [Key]
-        public int Id { get; set; }
         public DateTime ProcedureTime { get; set; }
         public bool Allowance { get; set; }
 

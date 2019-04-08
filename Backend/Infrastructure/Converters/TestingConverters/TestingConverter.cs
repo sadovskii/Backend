@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Backend.Converters
+namespace Backend.Infrastructure.Converters.TestingConverters
 {
-    public class PatientConverter
+    public class TestingConverter
     {
     }
 }

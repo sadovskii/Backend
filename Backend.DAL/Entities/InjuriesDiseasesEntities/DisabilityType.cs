@@ -3,10 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Backend.DAL.Entities.InjuriesDiseasesEntities
 {
-    public class DisabilityType
+    public class DisabilityType : BaseEntity
     {
-        [Key]
-        public int Id { get; set; }
-        public string Name { get; set; }}
+        public string Name { get; set; }
     }
 }
